@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 867155576}
   - component: {fileID: 867155575}
   - component: {fileID: 867155574}
+  - component: {fileID: 867155579}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -301,6 +302,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &867155579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867155573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb8edcae4b49b647b29def5e74fa02d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  estrela: {fileID: 957215572}
 --- !u!1 &957215568
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +326,7 @@ GameObject:
   - component: {fileID: 957215569}
   - component: {fileID: 957215571}
   - component: {fileID: 957215570}
+  - component: {fileID: 957215572}
   m_Layer: 5
   m_Name: Teste_premio
   m_TagString: Untagged
@@ -374,6 +389,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957215568}
   m_CullTransparentMesh: 0
+--- !u!95 &957215572
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957215568}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ea035074a75d7841b27dea65547c227, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1079590003
 GameObject:
   m_ObjectHideFlags: 0

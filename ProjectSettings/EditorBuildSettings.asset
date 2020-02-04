@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Premios.unity
     guid: 655aefa85ae71e24aa29a00c607a07b3
+  - enabled: 1
+    path: Assets/Scenes/Controle_pais.unity
+    guid: 0917a5c1b3db05747949aa53f17d84a1
   m_configObjects: {}

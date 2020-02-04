@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class Clicar : MonoBehaviour
 {
@@ -11,10 +12,23 @@ public class Clicar : MonoBehaviour
     public Sprite seta;
     //public VideoClip videoToPlay;
     public Animator animator;
+    public Animator premio;
     private int count = 0;
+    private bool acertou = false;
+    private bool finito = false;
+    private float timeLeft = 3;
 
     void Update()
     {
+        if(acertou == true)
+        {
+            timeLeft -= Time.deltaTime;
+        }
+        if (timeLeft <= 0)
+        {
+            premio.SetBool("Acertou", true);
+            finito = true;
+        }
         for (var i = 0; i < Input.touchCount; ++i)
         {
             if (Input.GetTouch(i).phase == TouchPhase.Began)
@@ -27,6 +41,7 @@ public class Clicar : MonoBehaviour
                 if (hit.collider.gameObject.name == "Paleta")
                 {
                     animator.SetBool("Acertou", true);
+                    acertou = true;
                     //var videoPlayer = fundo.gameObject.GetComponent<VideoPlayer>();
                     //videoPlayer.clip = videoToPlay;
                 }
@@ -52,8 +67,13 @@ public class Clicar : MonoBehaviour
             if (hit.collider.gameObject.name == "Paleta")
             {
                 animator.SetBool("Acertou", true);
+                acertou = true;
                 //var videoPlayer = fundo.gameObject.GetComponent<VideoPlayer>();
                 //videoPlayer.clip = videoToPlay;
+            }
+            if(hit.collider.gameObject.name == "Estrela" && finito == true){
+                ScriptStatic.teste = true;
+                loadScene("Premios");
             }
             else
             {
@@ -72,4 +92,8 @@ public class Clicar : MonoBehaviour
         animator.SetBool("Errou", false);
     }
 
+    public void loadScene(string level)
+    {
+        SceneManager.LoadScene(level);
+    }
 }

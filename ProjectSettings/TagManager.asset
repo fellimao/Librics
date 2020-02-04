@@ -50,3 +50,6 @@ TagManager:
   - name: Maisfrente
     uniqueID: 829606621
     locked: 0
+  - name: MaisMaisfrente
+    uniqueID: 756707775
+    locked: 0
