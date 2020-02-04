@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Historia_teste.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Historias.unity
+    guid: a58bf934f9dbe674ba5368e56b9fb4be
+  - enabled: 1
+    path: Assets/Scenes/Menu_geral.unity
+    guid: 6f0a42309bde8d041985e7b5d20ac287
+  - enabled: 1
+    path: Assets/Scenes/Premios.unity
+    guid: 655aefa85ae71e24aa29a00c607a07b3
   m_configObjects: {}
